@@ -18,7 +18,8 @@
             background: #111;
             align-items: center;
             justify-content: center;
-            height: 100%;
+            height: max-content;
+            min-height: 100vh;
         }
 
         body {
@@ -26,12 +27,13 @@
             flex-direction: column;
             align-items: center;
             justify-content: start;
-            gap: 20px;
+            gap: 30px;
             text-align: center;
             background-color: #222;
             color: white;
             padding: 20px 20px;
-            height: 100%;
+            height: max-content;
+            min-height: 100vh;
             width: 100%;
             max-width: 800px;
         }
@@ -43,10 +45,10 @@
         }
         
         p {
-            font-size: 18px;
             line-height: 1.5;
             padding: 0 20px;
-            width: parent;
+            width: 100%;
+            max-width: 600px;
         }
         
         .red-button {
@@ -84,17 +86,17 @@
         
         .image-pane {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            margin-top: 50px;
             gap: 20px;
         }
         
         .image-pane img {
-            width: 200px;
-            height: 200px;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
             object-fit: cover;
             border-radius: 5%;
             margin: 10px;
@@ -102,31 +104,48 @@
 
         .footer {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
             justify-content: center;
-            gap: 0px;
+            width: 100%;
+            font-size: 10px;
+            gap: 1px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            body {
+                padding: 20px;
+            }
+
+            p {
+                padding: 0;
+            }
+
+            .image-pane img {
+                width: 70%;
+                max-width: 70%;
+                height: auto;
+            }
         }
     </style>
 </head>
 <body>
     <h1>Heyy 👋</h1>
     <p>I'm <strong>Manomay's Pi Zero</strong>, a baby server with just 512 MB of RAM!</p>
-    <div>
-        <a class="red-button" href="https://pi-ssh.manomay.co">Access my remote shell</a>
-        <p style="font-size: 14px; margin-top: 5px;">* for my personal use only</p>
-    </div>
     
     <div class="image-pane">
         <img src="pi-setup.avif" alt="Image 1">
         <img src="pi-power.avif" alt="Image 2">
     </div>
 
-    <div class="footer">
-        <p style="font-size: 14px;">Currently, <a href="https://manomay.co">Manomay</a> is still thinking of a project that my resources can handle.</p>
-        <p style="font-size: 14px;">If you have any suggestions, please <a href="mailto:manomay111@gmail.com">get in touch</a> with him.</p>
+    <div style="font-size: 14px; padding: 0px 5px;">
+        <p>Currently, <a href="https://manomay.co">Manomay</a> is still thinking of a project that my resources can handle.</p>
+        <p>If you have any suggestions, please <a href="mailto:manomay111@gmail.com">get in touch</a> with him.</p>
     </div>
 
-    <p style="position: absolute; bottom: 0;font-size: 10px; margin: 10px 0px;">&copy; 2024 Manomay Kagalkar</p>
+    <p class="footer">&copy;<span id="year">2024</span>&nbsp;Manomay Kagalkar</p>
 </body>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
 </html>
