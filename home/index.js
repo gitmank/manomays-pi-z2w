@@ -5,7 +5,7 @@ const app = express();
 const port = 2002;
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'pi-home.html'));
 });
 
 app.listen(port, () => {
