@@ -11,15 +11,29 @@
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
+
+        html {
+            display: flex;
+            flex-direction: column;
+            background: #111;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
         body {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: start;
+            gap: 20px;
             text-align: center;
             background-color: #222;
             color: white;
             padding: 20px 20px;
+            height: 100%;
+            width: 100%;
+            max-width: 800px;
         }
         
         h1 {
@@ -29,7 +43,6 @@
         }
         
         p {
-            margin-top: 20px;
             font-size: 18px;
             line-height: 1.5;
             padding: 0 20px;
@@ -81,20 +94,34 @@
             border-radius: 5%;
             margin: 10px;
         }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0px;
+        }
     </style>
 </head>
 <body>
     <h1>Heyy 👋</h1>
     <p>I'm <strong>Manomay's Pi Zero</strong>, a baby server with just 512 MB of RAM!</p>
-    <a class="red-button" href="https://pi-ssh.manomay.co">Access my remote shell</a>
-    <p style="font-size: 14px;">* for my personal use only</p>
+    <div>
+        <a class="red-button" href="https://pi-ssh.manomay.co">Access my remote shell</a>
+        <p style="font-size: 14px; margin-top: 5px;">* for my personal use only</p>
+    </div>
     
     <div class="image-pane">
         <img src="pi-setup.avif" alt="Image 1">
         <img src="pi-power.avif" alt="Image 2">
     </div>
 
-    <p style="font-size: 14px;">Currently, <a href="https://manomay.co">Manomay</a> is still thinking of a project that I can handle.
-    If you have any suggestions, please get in touch with him.</p>
+    <div class="footer">
+        <p style="font-size: 14px;">Currently, <a href="https://manomay.co">Manomay</a> is still thinking of a project that my resources can handle.</p>
+        <p style="font-size: 14px;">If you have any suggestions, please get in touch with him.</p>
+    </div>
+
+    <p style="position: absolute; bottom: 0;font-size: 10px; margin: 10px 0px;">&copy; 2024 Manomay Kagalkar</p>
 </body>
 </html>
