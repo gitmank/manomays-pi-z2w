@@ -21,5 +21,8 @@
   "homepage": "https://github.com/gitmank/manomays-pi-z2w#readme",
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   }
 }
