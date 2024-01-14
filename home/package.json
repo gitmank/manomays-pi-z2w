@@ -1,0 +1,25 @@
+{
+  "name": "pi.manomay.co",
+  "version": "1.0.0",
+  "description": "home page for my raspberry pi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitmank/manomays-pi-z2w.git"
+  },
+  "keywords": [
+    "manomay"
+  ],
+  "author": "Manomay Kagalkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gitmank/manomays-pi-z2w/issues"
+  },
+  "homepage": "https://github.com/gitmank/manomays-pi-z2w#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
