@@ -4,8 +4,10 @@ const path = require('path');
 const app = express();
 const port = 2002;
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'pi-home.html'));
+    res.sendFile(path.join(__dirname, '/public/pi-home.html'));
 });
 
 app.listen(port, () => {
