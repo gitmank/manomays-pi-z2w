@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manomay's Pi Zero</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #222;
+            color: white;
+        }
+        
+        h1 {
+            margin-top: 50px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #c7053d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        a:hover {
+            background-color: white;
+            color: #c7053d;
+        }
+        
+        strong {
+            background-color: #c7053d;
+            padding: 3px 5px;
+            border-radius: 5px;
+            color: #fff;
+        }
+        
+        .image-pane {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+        
+        .image-pane img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5%;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Heyy 👋</h1>
+    <p>I'm <strong>Manomay's Pi Zero</strong>, a baby server with just 512 MB of RAM!</p>
+    <a href="https://pi-ssh.manomay.co">Access my remote shell</a>
+    
+    <div class="image-pane">
+        <img src="pi-setup.avif" alt="Image 1">
+        <img src="pi-power.avif" alt="Image 2">
+    </div>
+</body>
+</html>
